@@ -3,6 +3,14 @@ import cookie1 from "@/assets/cookie1.png";
 import cookie2 from "@/assets/cookie2.png";
 import stars from "@/assets/stars.png";
 import belt from "@/assets/belt.svg";
+import sticker from "@/assets/sticker.png";
+import dimensions from "@/assets/dimensions.png";
+import prefed from "@/assets/prefed.png";
+import clubCutters from "@/assets/clubcutters.png";
+import threeCutters from "@/assets/3cutters.png";
+import noHackatime from "@/assets/nohackatime.png";
+import guideHere from "@/assets/guidehere.png";
+import teachingDino from "@/assets/teachingdino.png";
 import {
   Tooltip,
   TooltipContent,
@@ -57,7 +65,7 @@ export default function Home() {
               <span className="txtshdw z-50">BUILD</span>
             </div>
             <img
-              src="src/assets/sticker.png"
+              src={sticker}
               className="absolute w-75 sm:w-[55vw] lg:w-125 xl:w-135 z-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             />
           </h1>
@@ -105,29 +113,29 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 font-jaro text-2xl mt-5 items-start w-fit mx-auto">
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
               <img
-                src="src/assets/dimensions.png"
+                src={dimensions}
                 className="w-full max-w-50"
               />
               <span>Maximum 100x100x100mm on each cutter</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src="src/assets/prefed.png" className="w-full max-w-50" />
+              <img src={prefed} className="w-full max-w-50" />
               <span>Any CAD software accepted, but Onshape preferred!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto sm:col-span-2 lg:col-span-1">
               <img
-                src="src/assets/clubcutters.png"
+                src={clubCutters}
                 className="w-full max-w-50"
               />
               <span>Up to 3 cutters per person for clubs!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src="src/assets/3cutters.png" className="w-full max-w-50" />
+              <img src={threeCutters} className="w-full max-w-50" />
               <span>3 cutters REQUIRED for individuals</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
               <img
-                src="src/assets/nohackatime.png"
+                src={noHackatime}
                 className="w-full max-w-30"
               />
               <span>Time tracking not required!</span>
@@ -136,7 +144,7 @@ export default function Home() {
               href="/somepath"
               className="underline border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto"
             >
-              <img src="src/assets/guidehere.png" className="w-full max-w-50" />
+              <img src={guideHere} className="w-full max-w-50" />
               <span>Guide Available!</span>
             </a>
           </div>
@@ -164,7 +172,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">Run a workshop!</h1>
           </div>
-          <img src="src/assets/teachingdino.png" />
+          <img src={teachingDino} />
           <div>
             <span className="text-3xl font-jaro">Hey club leader!</span>
             <p className="text-xl">
