@@ -27,20 +27,18 @@ export default function HomeGallery() {
       <CarouselContent className="-ml-2">
         {Array.from(images).map((image, index) => (
           <CarouselItem key={index} className="pl-2 sm:basis-1/2 lg:basis-1/3">
-            <Card className="overflow-hidden border-0 bg-transparent shadow-lg">
-              <CardContent className="p-0">
-                <div className="aspect-4/3 w-full ">
-                  <img
-                    src={image}
-                    alt={`Past workshop ${index + 1}`}
-                    className="h-full w-full select-none object-cover"
-                    loading="lazy"
-                    decoding="async"
-                    draggable={false}
-                  />
-                </div>
-              </CardContent>
-            </Card>
+            <div className="overflow-hidden border-0 bg-transparent shadow-lg">
+              <div className="aspect-4/3 w-full ">
+                <img
+                  src={image}
+                  alt={`Past workshop ${index + 1}`}
+                  className="h-full w-full select-none object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  draggable={false}
+                />
+              </div>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
