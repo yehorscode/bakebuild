@@ -8,6 +8,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import HomeGallery from "./components/gallery";
+
 export default function Home() {
   return (
     <div className="flex-1">
@@ -20,7 +22,7 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center">
           <img
             src={cookie1}
-            className="absolute w-40  top-10 -right-10 cookie"
+            className="absolute w-40 top-10 -right-10 cookie"
           />
           <img
             src={cookie1}
@@ -56,11 +58,11 @@ export default function Home() {
             </div>
             <img
               src="src/assets/sticker.png"
-              className="absolute z-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              className="absolute w-75 sm:w-[55vw] lg:w-125 xl:w-135 z-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             />
           </h1>
 
-          <span className="txtstroke2 px-5 sm:px-0 text-xl sm:text-2xl lg:text-4xl font-slackey">
+          <span className="txtstroke2 px-5 lg:px-5 text-xl z-999 sm:text-2xl lg:text-3xl font-slackey">
             Make your own cookie cutter and get it shipped to you!
           </span>
           <div className="flex gap-3 mt-5">
@@ -123,6 +125,13 @@ export default function Home() {
               <img src="src/assets/3cutters.png" className="w-full max-w-50" />
               <span>3 cutters REQUIRED for individuals</span>
             </span>
+            <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
+              <img
+                src="src/assets/nohackatime.png"
+                className="w-full max-w-30"
+              />
+              <span>Time tracking not required!</span>
+            </span>
             <a
               href="/somepath"
               className="underline border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto"
@@ -130,6 +139,40 @@ export default function Home() {
               <img src="src/assets/guidehere.png" className="w-full max-w-50" />
               <span>Guide Available!</span>
             </a>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <span className="text-xl font-jaro mt-5">
+              You can print cookie cutters on your own printer too! (no filament
+              grants)
+            </span>
+          </div>
+        </div>
+      </section>
+      <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
+        <div className="justify-center flex flex-col p-10">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="smtxt text-8xl font-jaro">Past workshops</h1>
+            <div className="mt-10 text-center text-2xl font-jaro">
+              <HomeGallery />
+              <span>Looks cool doesn't it?</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col bg-red-400  w-full overflow-hidden">
+        <div className="justify-center flex flex-col p-10">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="smtxt text-8xl font-jaro">Run a workshop!</h1>
+          </div>
+          <img src="src/assets/teachingdino.png" />
+          <div>
+            <span className="text-3xl font-jaro">Hey club leader!</span>
+            <p className="text-xl">
+              Have you ever wanted to run a Bakebuild workshop in your club?
+              Yes? Everyone wants that. It's actually pretty easy! To run a
+              workshop you <b>must</b> have first completed Bakebuild. Do you
+              want to learn more? <a className="underline">click here</a>
+            </p>
           </div>
         </div>
       </section>
