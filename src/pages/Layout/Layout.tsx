@@ -12,9 +12,9 @@ export default function Layout() {
       <main className="flex flex-1 flex-col">
         <Outlet />
       </main>
-      <footer className="bg-gray-400">
+      {/*<footer className="bg-gray-400">
         <span>Footer</span>
-      </footer>
+      </footer>*/}
     </div>
   );
 }
