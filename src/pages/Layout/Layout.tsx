@@ -3,11 +3,27 @@ import { Outlet } from "react-router-dom";
 export default function Layout() {
   return (
     <div className="flex flex-col min-h-screen">
-      <nav className="absolute left-5 z-999">
+      <div className="absolute left-5 z-999">
         <img
           width={200}
           src="https://assets.hackclub.com/flag-orpheus-top.svg"
         />
+      </div>
+      <nav className="absolute right-2 p-3 text-white ">
+        <div className="flex gap-3 text-right ">
+          <a
+            className="text-right font-jaro bg-gray-900 py-1 px-2 text-xl"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            className="text-right font-jaro bg-gray-900 py-1 px-2 text-xl z-2000"
+            href="/gallery"
+          >
+            Gallery
+          </a>
+        </div>
       </nav>
       <main className="flex flex-1 flex-col">
         <Outlet />
