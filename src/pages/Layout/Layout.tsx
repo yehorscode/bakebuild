@@ -5,6 +5,7 @@ export default function Layout() {
     <div className="flex flex-col min-h-screen">
       <div className="absolute left-5 z-999">
         <img
+          fetchPriority="low"
           src="https://assets.hackclub.com/flag-orpheus-top.svg"
           className="w-[25vw] sm:w-[30vw] md:w-50"
         />

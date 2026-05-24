@@ -48,10 +48,12 @@ export default function Home() {
           {/*<img src="src/assets/cut.webp" className="w-250" />*/}
           <h1 className="relative z-5 text-[30vw] lg:text-[280px] xl:text-[30vh] -mt-10 font-jaro uppercase inline-flex flex-col w-fit leading-none">
             <img
+              fetchPriority="low"
               src={stars}
               className="absolute -top-12 -left-10 -translate-x-1/2 w-100 pointer-events-none"
             />
             <img
+              fetchPriority="low"
               src={stars}
               className="absolute -bottom-12 -right-10 translate-x-1/2 rotate-180 w-100 pointer-events-none"
             />
@@ -134,15 +136,27 @@ export default function Home() {
               <span>Any CAD software accepted, but Onshape preferred!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto sm:col-span-2 lg:col-span-1">
-              <img src={clubCutters} className="w-full max-w-50" />
+              <img
+                src={clubCutters}
+                className="w-full max-w-50"
+                fetchPriority="low"
+              />
               <span>Up to 3 cutters per person for clubs!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src={threeCutters} className="w-full max-w-50" />
+              <img
+                src={threeCutters}
+                className="w-full max-w-50"
+                fetchPriority="low"
+              />
               <span>3 cutters REQUIRED for individuals</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src={noHackatime} className="w-full max-w-30" />
+              <img
+                src={noHackatime}
+                className="w-full max-w-30"
+                fetchPriority="low"
+              />
               <span>Time tracking not required!</span>
             </span>
             <a
@@ -174,7 +188,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <img src={bakeit} />
+          <img src={bakeit} fetchPriority="low" />
         </div>
       </section>
       <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
@@ -193,7 +207,7 @@ export default function Home() {
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">Run a workshop!</h1>
           </div>
-          <img src={teachingDino} />
+          <img src={teachingDino} fetchPriority="low" />
           <div>
             <span className="text-3xl font-jaro">Hey club leader!</span>
             <p className="text-xl">
