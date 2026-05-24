@@ -1,17 +1,17 @@
 import "./home.scss";
-import cookie1 from "@/assets/cookie1.png";
-import cookie2 from "@/assets/cookie2.png";
-import stars from "@/assets/stars.png";
+import cookie1 from "@/assets/cookie1.webp";
+import cookie2 from "@/assets/cookie2.webp";
+import stars from "@/assets/stars.webp";
 import belt from "@/assets/belt.svg";
-import sticker from "@/assets/sticker.png";
-import dimensions from "@/assets/dimensions.png";
-import prefed from "@/assets/prefed.png";
-import clubCutters from "@/assets/clubcutters.png";
-import threeCutters from "@/assets/3cutters.png";
-import noHackatime from "@/assets/nohackatime.png";
-import guideHere from "@/assets/guidehere.png";
-import teachingDino from "@/assets/teachingdino.png";
-import bakeit from "@/assets/bakeit.png";
+import sticker from "@/assets/sticker.webp";
+import dimensions from "@/assets/dimensions.webp";
+import prefed from "@/assets/prefed.webp";
+import clubCutters from "@/assets/clubcutters.webp";
+import threeCutters from "@/assets/3cutters.webp";
+import noHackatime from "@/assets/nohackatime.webp";
+import guideHere from "@/assets/guidehere.webp";
+import teachingDino from "@/assets/teachingdino.webp";
+import bakeit from "@/assets/bakeit.webp";
 import {
   Tooltip,
   TooltipContent,
@@ -45,7 +45,7 @@ export default function Home() {
             src={cookie2}
             className="absolute w-50 bottom-19 -right-20 cookie"
           />
-          {/*<img src="src/assets/cut.png" className="w-250" />*/}
+          {/*<img src="src/assets/cut.webp" className="w-250" />*/}
           <h1 className="relative z-5 text-[30vw] lg:text-[280px] xl:text-[30vh] -mt-10 font-jaro uppercase inline-flex flex-col w-fit leading-none">
             <img
               src={stars}
