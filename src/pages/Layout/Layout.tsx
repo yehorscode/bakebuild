@@ -5,8 +5,8 @@ export default function Layout() {
     <div className="flex flex-col min-h-screen">
       <div className="absolute left-5 z-999">
         <img
-          width={200}
           src="https://assets.hackclub.com/flag-orpheus-top.svg"
+          className="w-[25vw] sm:w-[30vw] md:w-50"
         />
       </div>
       <nav className="absolute right-2 p-3 text-white ">

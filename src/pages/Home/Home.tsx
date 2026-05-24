@@ -11,6 +11,7 @@ import threeCutters from "@/assets/3cutters.png";
 import noHackatime from "@/assets/nohackatime.png";
 import guideHere from "@/assets/guidehere.png";
 import teachingDino from "@/assets/teachingdino.png";
+import bakeit from "@/assets/bakeit.png";
 import {
   Tooltip,
   TooltipContent,
@@ -45,7 +46,7 @@ export default function Home() {
             className="absolute w-50 bottom-19 -right-20 cookie"
           />
           {/*<img src="src/assets/cut.png" className="w-250" />*/}
-          <h1 className="relative z-5 text-[35vw] lg:text-[280px] xl:text-[360px] -mt-30 font-jaro uppercase inline-flex flex-col w-fit leading-none">
+          <h1 className="relative z-5 text-[30vw] lg:text-[280px] xl:text-[30vh] -mt-10 font-jaro uppercase inline-flex flex-col w-fit leading-none">
             <img
               src={stars}
               className="absolute -top-12 -left-10 -translate-x-1/2 w-100 pointer-events-none"
@@ -66,23 +67,33 @@ export default function Home() {
             </div>
             <img
               src={sticker}
-              className="absolute w-75 sm:w-[55vw] lg:w-125 xl:w-135 z-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              className="absolute w-75 sm:w-[55vw] lg:w-125 xl:w-[50vh]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             />
           </h1>
 
-          <span className="txtstroke2 px-5 lg:px-5 text-xl z-999 sm:text-2xl lg:text-3xl font-slackey">
+          <span className="txtstroke2 px-5 lg:px-5 text-md text-center z-50 sm:text-2xl lg:text-3xl font-slackey">
             Make your own cookie cutter and get it shipped to you!
           </span>
-          <div className="flex gap-3 mt-5">
+          <div className="flex gap-3 z-100 mt-2">
             <Tooltip>
-              <TooltipTrigger className="underline border-2 px-5 py-2 text-xl rounded-xl font-milkyway">
-                Make It
+              <TooltipTrigger asChild>
+                <a
+                  href="#make-it"
+                  className="underline border-2 px-5 py-2 text-xl rounded-xl font-milkyway"
+                >
+                  Make It
+                </a>
               </TooltipTrigger>
               <TooltipContent>Learn how to make it</TooltipContent>
             </Tooltip>
             <Tooltip>
-              <TooltipTrigger className="underline group border-2 border-dashed px-5 py-2 text-xl rounded-xl font-milkyway">
-                Bake It
+              <TooltipTrigger asChild>
+                <a
+                  href="#bake-it"
+                  className="underline group border-2 border-dashed px-5 py-2 text-xl rounded-xl font-milkyway"
+                >
+                  Bake It
+                </a>
               </TooltipTrigger>
               <TooltipContent>
                 <span>Ship your project!</span>
@@ -93,29 +104,29 @@ export default function Home() {
         <div className="belt-container absolute bottom-0">
           <div className="belt-track">
             <div className="belt-group">
-              <img className="belt-image" src={belt} />
-              <img className="belt-image" src={belt} />
+              <img className="belt-image h-[10vh]" src={belt} />
+              <img className="belt-image h-[10vh]" src={belt} />
             </div>
             <div className="belt-group" aria-hidden="true">
-              <img className="belt-image" src={belt} />
+              <img className="belt-image h-[10vh]" src={belt} />
             </div>
           </div>
         </div>
       </section>
-      <section className="relative border-5 text-white flex flex-col  w-full overflow-hidden">
+      <section
+        className="relative border-5 text-white flex flex-col  w-full overflow-hidden"
+        id="make-it"
+      >
         <div className="justify-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">Make it!</h1>
-            <div className="text-2xl font-slackey underline">
+            <div className="text-xl text-center font-slackey underline">
               <a href="/somepath">Don't know how? Click here for a tutorial</a>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 font-jaro text-2xl mt-5 items-start w-fit mx-auto">
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img
-                src={dimensions}
-                className="w-full max-w-50"
-              />
+              <img src={dimensions} className="w-full max-w-50" />
               <span>Maximum 100x100x100mm on each cutter</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
@@ -123,10 +134,7 @@ export default function Home() {
               <span>Any CAD software accepted, but Onshape preferred!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto sm:col-span-2 lg:col-span-1">
-              <img
-                src={clubCutters}
-                className="w-full max-w-50"
-              />
+              <img src={clubCutters} className="w-full max-w-50" />
               <span>Up to 3 cutters per person for clubs!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
@@ -134,10 +142,7 @@ export default function Home() {
               <span>3 cutters REQUIRED for individuals</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img
-                src={noHackatime}
-                className="w-full max-w-30"
-              />
+              <img src={noHackatime} className="w-full max-w-30" />
               <span>Time tracking not required!</span>
             </span>
             <a
@@ -156,11 +161,27 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section
+        className="relative border-5 text-white flex flex-col  w-full overflow-hidden"
+        id="bake-it"
+      >
+        <div className="justify-center flex flex-col p-10">
+          <div className="flex mb-5 flex-col justify-center items-center">
+            <h1 className="smtxt text-8xl font-jaro">Bake it!</h1>
+            <div className="text-xl text-center font-slackey underline">
+              <a href="http://hack.club/submit-bakebuild">
+                Submit your project here
+              </a>
+            </div>
+          </div>
+          <img src={bakeit} />
+        </div>
+      </section>
       <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
         <div className="justify-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">Past workshops</h1>
-            <div className="mt-10 text-center text-2xl font-jaro">
+            <div className="mt-5 text-center text-2xl font-jaro">
               <HomeGallery />
               <span>Looks cool doesn't it?</span>
             </div>
