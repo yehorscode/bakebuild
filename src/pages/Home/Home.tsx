@@ -50,12 +50,12 @@ export default function Home() {
             <img
               fetchPriority="low"
               src={stars}
-              className="absolute -top-12 -left-10 -translate-x-1/2 w-100 pointer-events-none"
+              className="absolute invisible sm:visible -top-12 -left-10 -translate-x-1/2 w-100 pointer-events-none"
             />
             <img
               fetchPriority="low"
               src={stars}
-              className="absolute -bottom-12 -right-10 translate-x-1/2 rotate-180 w-100 pointer-events-none"
+              className="absolute invisible sm:visible -bottom-12 -right-10 translate-x-1/2 rotate-180 w-100 pointer-events-none"
             />
             <div className="flex flex-col gap-30">
               <span className="txtshdw z-50 flex w-full text-shadow-accent justify-between">
@@ -121,10 +121,7 @@ export default function Home() {
       >
         <div className="justify-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="smtxt text-8xl font-jaro">Make it!</h1>
-            <div className="text-xl text-center font-slackey underline">
-              <a href="/somepath">Don't know how? Click here for a tutorial</a>
-            </div>
+            <h1 className="smtxt text-6xl sm:text-8xl font-jaro">Make it!</h1>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 font-jaro text-2xl mt-5 items-start w-fit mx-auto">
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
@@ -167,53 +164,73 @@ export default function Home() {
               <span>Guide Available!</span>
             </a>
           </div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="text-xl mt-5 text-center font-slackey underline">
+            <a href="/somepath">Don't know how? Click here for a tutorial</a>
+          </div>
+          {/*<div className="flex flex-col justify-center items-center">
             <span className="text-xl font-jaro mt-5">
               You can print cookie cutters on your own printer too! (no filament
               grants)
             </span>
-          </div>
+          </div>*/}
         </div>
       </section>
       <section
         className="relative border-5 text-white flex flex-col  w-full overflow-hidden"
         id="bake-it"
       >
-        <div className="justify-center flex flex-col p-10">
+        <div className="justify-center flex flex-col items-center  p-10">
           <div className="flex mb-5 flex-col justify-center items-center">
-            <h1 className="smtxt text-8xl font-jaro">Bake it!</h1>
-            <div className="text-xl text-center font-slackey underline">
-              <a href="http://hack.club/submit-bakebuild">
-                Submit your project here
-              </a>
-            </div>
+            <h1 className="smtxt  text-6xl sm:text-8xl font-jaro">Bake it!</h1>
           </div>
-          <img src={bakeit} fetchPriority="low" />
+          <img src={bakeit} fetchPriority="low" className="lg:max-w-[50vw]" />
+          <p className="text-xl mt-3 font-jaro max-w-2xl">
+            You can print your own cookie cutters on your own 3d printer (no
+            filament grants tho) or you may request them to be shipped to your
+            house from Hack Club hq
+          </p>
+          <div className="text-xl mt-5 text-center font-slackey underline">
+            <a href="http://hack.club/submit-bakebuild">
+              Submit your project here
+            </a>
+          </div>
         </div>
       </section>
       <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
         <div className="justify-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="smtxt text-8xl font-jaro">Past workshops</h1>
-            <div className="mt-5 text-center text-2xl font-jaro">
+            <h1 className="smtxt text-6xl sm:text-8xl font-jaro">
+              Past workshops
+            </h1>
+            <div className="mt-5 text-xl text-center flex flex-col  font-jaro">
               <HomeGallery />
-              <span>Looks cool doesn't it?</span>
+              <div className="flex flex-col mt-3">
+                <span>Looks cool doesn't it?</span>
+                <a
+                  className="text-xl text-center font-slackey underline"
+                  href="/gallery"
+                >
+                  View more images in our gallery
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col bg-red-400  w-full overflow-hidden">
-        <div className="justify-center flex flex-col p-10">
+        <div className="justify-center items-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="smtxt text-8xl font-jaro">Run a workshop!</h1>
+            <h1 className="smtxt text-6xl sm:text-8xl font-jaro">
+              Run a workshop!
+            </h1>
           </div>
-          <img src={teachingDino} fetchPriority="low" />
+          <img src={teachingDino} fetchPriority="low" className="max-w-5xl" />
           <div>
             <span className="text-3xl font-jaro">Hey club leader!</span>
-            <p className="text-xl">
-              Have you ever wanted to run a Bakebuild workshop in your club?
+            <p className="text-lg max-w-3xl">
+              Have you ever wanted to run a BakeBuild workshop in your club?
               Yes? Everyone wants that. It's actually pretty easy! To run a
-              workshop you <b>must</b> have first completed Bakebuild. Do you
+              workshop you <b>must</b> have first completed BakeBuild. Do you
               want to learn more? <a className="underline">click here</a>
             </p>
           </div>
