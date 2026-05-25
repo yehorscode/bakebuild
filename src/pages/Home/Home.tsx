@@ -224,10 +224,10 @@ export default function Home() {
               Run a workshop!
             </h1>
           </div>
-          <img src={teachingDino} fetchPriority="low" className="max-w-5xl" />
-          <div>
+          <img src={teachingDino} fetchPriority="low" />
+          <div className="max-w-3xl">
             <span className="text-3xl font-jaro">Hey club leader!</span>
-            <p className="text-lg max-w-3xl">
+            <p className="text-lg ">
               Have you ever wanted to run a BakeBuild workshop in your club?
               Yes? Everyone wants that. It's actually pretty easy! To run a
               workshop you <b>must</b> have first completed BakeBuild. Do you

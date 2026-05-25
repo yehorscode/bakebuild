@@ -150,4 +150,7 @@
   .jaro {
     @apply font-jaro font-normal [font-optical-sizing:auto];
   }
+  ul {
+    @apply list-disc list-inside;
+  }
 }

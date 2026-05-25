@@ -38,9 +38,16 @@ export default function GalleryPage() {
                 src={src}
                 onClick={() => showImage(i)}
                 alt={`Gallery Image ${i + 1}`}
-                className="w-full h-auto rounded-lg shadow-md hover:cursor-pointer hover:scale-110 transition-all"
+                className="w-full h-auto rounded-lg shadow-md hover:cursor-pointer hover:scale-102 transition-all"
               />
             ))}
+            {images.length == 0 && (
+              <div className="bg-red-600 p-10">
+                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
+                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
+                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
+              </div>
+            )}
           </div>
           {showModal && (
             <div

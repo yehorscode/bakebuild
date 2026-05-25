@@ -29,9 +29,35 @@ export default function Layout() {
       <main className="flex flex-1 flex-col">
         <Outlet />
       </main>
-      {/*<footer className="bg-gray-400">
-        <span>Footer</span>
-      </footer>*/}
+      <footer className="bg-black text-white font-jaro text-md p-4 flex">
+        <span>
+          Made by teens, for teens at{" "}
+          <a className="underline text-sky-400" href="https://hackclub.com">
+            Hack Club
+          </a>
+          , 18 and under only, check out our{" "}
+          <a
+            className="underline text-sky-400"
+            href="https://github.com/hackclub/bakebuild"
+          >
+            GitHub
+          </a>
+          ,{" "}
+          <a
+            className="underline text-sky-400"
+            href="https://hcb.hackclub.com/bakebuild"
+          >
+            HCB
+          </a>
+          , and the{" "}
+          <a
+            className="underline text-sky-400"
+            href="https://hackclub.com/slack/"
+          >
+            Slack
+          </a>
+        </span>
+      </footer>
     </div>
   );
 }
