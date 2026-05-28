@@ -16,7 +16,7 @@ export function StepHeader({ children, className }: StepProps) {
 
 export function StepContent({ children, className }: StepProps) {
   return (
-    <div className={cn("grid gap-5 lg:grid-cols-2 text-lg", className)}>
+    <div className={cn("grid gap-5 lg:grid-cols-2 text-lg pt-3", className)}>
       {children}
     </div>
   );
