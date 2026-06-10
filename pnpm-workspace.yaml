@@ -1,2 +1,5 @@
 allowBuilds:
+  esbuild: set this to true or false
   msw: true
+minimumReleaseAgeExclude:
+  - vercel@54.11.0
