@@ -24,6 +24,12 @@ export default function Layout() {
           >
             Gallery
           </a>
+          <a
+            className="text-right font-jaro bg-gray-900 py-1 px-2 text-xl z-2000"
+            href="/guide"
+          >
+            Guide
+          </a>
         </div>
       </nav>
       <main className="flex flex-1 flex-col">
