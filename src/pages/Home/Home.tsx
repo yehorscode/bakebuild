@@ -165,7 +165,7 @@ export default function Home() {
             </a>
           </div>
           <div className="text-xl mt-5 text-center font-slackey underline">
-            <a href="/somepath">Don't know how? Click here for a tutorial</a>
+            <a href="/guide">Don't know how? Click here for a tutorial</a>
           </div>
           {/*<div className="flex flex-col justify-center items-center">
             <span className="text-xl font-jaro mt-5">

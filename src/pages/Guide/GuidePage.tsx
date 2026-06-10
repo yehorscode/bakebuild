@@ -180,13 +180,196 @@ export default function GuidePage() {
                     Use the spline tool and click along your outline to trace it
                     out
                   </span>
-                  <ul>
-                    <li></li>
+                  <ul className="ml-4">
+                    <li>Tip: Use the middle mouse button to navigate around</li>
+                    <li>
+                      Note that you can edit the point of your spline after
+                      confirming it. DO NOT TRY UNDOING WHIE MAKING THE
+                      OUTLINE!!!!
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Once you're happy with your outline, confirm your sketch by
+                  clicking on the green checkmark
+                </li>
+              </ul>
+              <img src="src/assets/guide/tracing.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>3D Time</StepHeader>
+            <StepContent>
+              <ul>
+                <li>
+                  Once your sketch is confirmed click the Extrude tool and
+                  choose "Thin" (extrude is to the right of "Sketch")
+                </li>
+                <li>Then, select the outline of your sketch</li>
+              </ul>
+              <img src="src/assets/guide/3dtime.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>3D Time 2</StepHeader>
+            <StepContent>
+              <ul>
+                <li>
+                  Now you can change the thickness <br />{" "}
+                  <ul className="ml-4">
+                    <li>I find that 2mm/.08in works best</li>
+                  </ul>
+                </li>
+                <li>
+                  Then, choose the depth{" "}
+                  <ul className="ml-4">
+                    <li>You're going to want this to be about 12.7mm/0.5in</li>
+                  </ul>
+                </li>
+                <li>Confirm the extrude</li>
+              </ul>
+              <img src="src/assets/guide/3dtime.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Pretty Little Border</StepHeader>
+            <StepContent>
+              <ul>
+                <li>Click "Extrude" again</li>
+                <li>
+                  <span>
+                    Select the BOTTOM side of the extrude and use thin to make a
+                    pretty border
+                  </span>
+                  <ul className="pl-4">
+                    <li>Tip: Use right click to rotate</li>
+                    <li>Thickness ~5mm</li>
+                    <li>Depth ~2mm</li>
                   </ul>
                 </li>
               </ul>
+              <img src="src/assets/guide/prettylittleborder.png" />
             </StepContent>
           </Step>
+          <Step>
+            <StepHeader>Admire</StepHeader>
+            <StepContent>
+              <ul>
+                <li>Look at your finished design!</li>
+                <li>Isn't it pretty?</li>
+                <li>Feel happy and proud!!</li>
+              </ul>
+              <img src="src/assets/guide/admire.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Screenshot</StepHeader>
+            <StepContent>
+              <ul>
+                <li>
+                  Take a screenshot of your design (like so) and save it to your
+                  computer
+                </li>
+                <li className="underline">
+                  You will need this for submission!!
+                </li>
+              </ul>
+              <img src="/src/assets/guide/screenshot.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Export</StepHeader>
+            <StepContent>
+              <ul>
+                <li>Now it's time to export it!</li>
+                <li>Right click the "Part Studio" tab in the bottom left</li>
+                <li>Select "Export"</li>
+              </ul>
+              <img src="src/assets/guide/export.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Export</StepHeader>
+            <StepContent>
+              <ul>
+                <li>A pop up will appear</li>
+                <li>
+                  Name your file something relevant and boring like "Cookie
+                  Cutter" again
+                </li>
+                <li>Select "STEP" for the format</li>
+                <li>Click the blue export button</li>
+                <li>
+                  You should now have a STEP file of your cookie cutter saved to
+                  your computer
+                </li>
+              </ul>
+              <img src="src/assets/guide/export2.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Double Checking</StepHeader>
+            <StepContent>
+              <ul>
+                <li>
+                  Visit{" "}
+                  <a
+                    href="https://3dviewer.net"
+                    className="underline hover:cursor-pointer"
+                  >
+                    3dviewer.net
+                  </a>
+                </li>
+                <li>
+                  560 Upload your file to the site (you can drag the entire zip)
+                </li>
+                <li>
+                  Once uploaded make sure the XYZ sizes don't exceed 100mm
+                </li>
+                <li>
+                  <span>
+                    If it exceeds 100mm you can reshape the file with the help
+                    from the video below:
+                  </span>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/_cFTrdposH0?si=HZrytjEk8jBtYGcG"
+                    title="YouTube video player"
+                    className="mt-5"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  ></iframe>
+                </li>
+              </ul>
+              <img src="src/assets/guide/doublecheck.png" />
+            </StepContent>
+          </Step>
+          <Step>
+            <StepHeader>Submitting</StepHeader>
+            <StepContent>
+              <div className="">
+                <span>
+                  Finally your hard work paid off and you can submit your cookie
+                  cutters!!
+                </span>
+                <ul>
+                  <li>
+                    Go to the <a href="/">Homepage</a>
+                  </li>
+                  <li>Click the "Bake It!" button</li>
+                  <li>Fill out the form</li>
+                  <li>That's all!</li>
+                </ul>
+              </div>
+            </StepContent>
+          </Step>
+          <div className="p-5 border-4 flex flex-col">
+            <span className="text-4xl font-jaro flex gap-2 align-center items-center">
+              BYE!{" "}
+              <img src="https://emoji.slack-edge.com/T09V59WQY1E/wavey/5bd2842c38fedd5c.gif" />
+            </span>
+            <span>Thanks for following the guide we hope you liked it!</span>
+          </div>
         </div>
       </div>
     </div>
