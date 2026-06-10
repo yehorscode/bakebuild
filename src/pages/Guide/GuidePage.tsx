@@ -1,4 +1,20 @@
 import { Step, StepHeader, StepContent } from "./components/reproducible-step";
+import cadtocookies from "@/assets/guide/cadtocookies.webp";
+import gettingStarted from "@/assets/guide/gettingstarted.webp";
+import dinoOutline from "@/assets/guide/dinooutline.webp";
+import importingTheImage from "@/assets/guide/importingtheimage.webp";
+import insertingTheImage from "@/assets/guide/insertingtheimage.webp";
+import insertingTheImage2 from "@/assets/guide/insertingtheimage2.webp";
+import dimension from "@/assets/guide/dimension.webp";
+import tracing from "@/assets/guide/tracing.webp";
+import threeDTime from "@/assets/guide/3dtime.webp";
+import prettylittleborder from "@/assets/guide/prettylittleborder.webp";
+import admire from "@/assets/guide/admire.webp";
+import screenshot from "@/assets/guide/screenshot.webp";
+import exportImage from "@/assets/guide/export.webp";
+import exportImage2 from "@/assets/guide/export2.webp";
+import doubleCheck from "@/assets/guide/doublecheck.webp";
+
 export default function GuidePage() {
   return (
     <div className="justify-center flex text-white align-center">
@@ -26,7 +42,7 @@ export default function GuidePage() {
                   <li className="font-bold text-lg">Get cookies!!!!</li>
                 </ul>
               </div>
-              <img src="/src/assets/guide/cadtocookies.png" />
+              <img src={cadtocookies} />
             </StepContent>
           </Step>
           <Step>
@@ -45,7 +61,7 @@ export default function GuidePage() {
                   </li>
                 </ul>
               </div>
-              <img src="/src/assets/guide/gettingstarted.png" />
+              <img src={gettingStarted} />
             </StepContent>
           </Step>
           <Step>
@@ -73,10 +89,7 @@ export default function GuidePage() {
                   </li>
                 </ul>
               </div>
-              <img
-                src="/src/assets/guide/dinooutline.png"
-                className="ml-auto "
-              />
+              <img src={dinoOutline} className="ml-auto " />
             </StepContent>
           </Step>
           <Step>
@@ -100,7 +113,7 @@ export default function GuidePage() {
                   <li>Message will confirm when the image has been imported</li>
                 </ul>
               </div>
-              <img src="src/assets/guide/importingtheimage.png" />
+              <img src={importingTheImage} />
             </StepContent>
           </Step>
           <Step>
@@ -127,7 +140,7 @@ export default function GuidePage() {
                   <li>Press "Insert image"</li>
                 </ul>
               </div>
-              <img src="src/assets/guide/insertingtheimage.png" />
+              <img src={insertingTheImage} />
             </StepContent>
           </Step>
           <Step>
@@ -141,7 +154,7 @@ export default function GuidePage() {
                   <li className="underline">DO NOT CONFIRM YOUR SKETCH YET</li>
                 </ul>
               </div>
-              <img src="src/assets/guide/insertingtheimage2.png" />
+              <img src={insertingTheImage2} />
             </StepContent>
           </Step>
           <Step>
@@ -164,7 +177,7 @@ export default function GuidePage() {
                   </ul>
                 </li>
               </ul>
-              <img src="src/assets/guide/dimension.png" />
+              <img src={dimension} />
             </StepContent>
           </Step>
           <Step>
@@ -194,7 +207,7 @@ export default function GuidePage() {
                   clicking on the green checkmark
                 </li>
               </ul>
-              <img src="src/assets/guide/tracing.png" />
+              <img src={tracing} />
             </StepContent>
           </Step>
           <Step>
@@ -207,7 +220,7 @@ export default function GuidePage() {
                 </li>
                 <li>Then, select the outline of your sketch</li>
               </ul>
-              <img src="src/assets/guide/3dtime.png" />
+              <img src={threeDTime} />
             </StepContent>
           </Step>
           <Step>
@@ -228,7 +241,7 @@ export default function GuidePage() {
                 </li>
                 <li>Confirm the extrude</li>
               </ul>
-              <img src="src/assets/guide/3dtime.png" />
+              <img src={threeDTime} />
             </StepContent>
           </Step>
           <Step>
@@ -248,7 +261,7 @@ export default function GuidePage() {
                   </ul>
                 </li>
               </ul>
-              <img src="src/assets/guide/prettylittleborder.png" />
+              <img src={prettylittleborder} />
             </StepContent>
           </Step>
           <Step>
@@ -259,7 +272,7 @@ export default function GuidePage() {
                 <li>Isn't it pretty?</li>
                 <li>Feel happy and proud!!</li>
               </ul>
-              <img src="src/assets/guide/admire.png" />
+              <img src={admire} />
             </StepContent>
           </Step>
           <Step>
@@ -274,7 +287,7 @@ export default function GuidePage() {
                   You will need this for submission!!
                 </li>
               </ul>
-              <img src="/src/assets/guide/screenshot.png" />
+              <img src={screenshot} />
             </StepContent>
           </Step>
           <Step>
@@ -285,7 +298,7 @@ export default function GuidePage() {
                 <li>Right click the "Part Studio" tab in the bottom left</li>
                 <li>Select "Export"</li>
               </ul>
-              <img src="src/assets/guide/export.png" />
+              <img src={exportImage} />
             </StepContent>
           </Step>
           <Step>
@@ -304,7 +317,7 @@ export default function GuidePage() {
                   your computer
                 </li>
               </ul>
-              <img src="src/assets/guide/export2.png" />
+              <img src={exportImage2} />
             </StepContent>
           </Step>
           <Step>
@@ -341,7 +354,7 @@ export default function GuidePage() {
                   ></iframe>
                 </li>
               </ul>
-              <img src="src/assets/guide/doublecheck.png" />
+              <img src={doubleCheck} />
             </StepContent>
           </Step>
           <Step>
