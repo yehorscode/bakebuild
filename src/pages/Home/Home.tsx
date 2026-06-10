@@ -157,7 +157,7 @@ export default function Home() {
               <span>Time tracking not required!</span>
             </span>
             <a
-              href="/somepath"
+              href="/guide"
               className="underline border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto"
             >
               <img src={guideHere} className="w-full max-w-50" />
@@ -190,7 +190,7 @@ export default function Home() {
             house from Hack Club hq
           </p>
           <div className="text-xl mt-5 text-center font-slackey underline">
-            <a href="http://hack.club/submit-bakebuild">
+            <a href="https://hack.club/submit-bakebuild">
               Submit your project here
             </a>
           </div>

@@ -14,15 +14,15 @@ import screenshot from "@/assets/guide/screenshot.webp";
 import exportImage from "@/assets/guide/export.webp";
 import exportImage2 from "@/assets/guide/export2.webp";
 import doubleCheck from "@/assets/guide/doublecheck.webp";
-
+import "./guidepage.scss";
 export default function GuidePage() {
   return (
     <div className="justify-center flex text-white align-center">
-      <div className="mt-10 xl:w-2/3">
-        <div className="justify-center flex flex-col p-10">
+      <div className="mt-10 px-1 w-screen xl:w-3/5">
+        <div className="justify-center text-left flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">The Guide</h1>
-            <div className="text-xl text-center font-slackey mt-3">
+            <div className="text-xl font-slackey mt-3">
               <span>Welcome! Welcome to the ultimate guide page.</span>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function GuidePage() {
                   <li className="font-bold text-lg">Get cookies!!!!</li>
                 </ul>
               </div>
-              <img src={cadtocookies} />
+              <img className="guideimage" src={cadtocookies} />
             </StepContent>
           </Step>
           <Step>
@@ -61,7 +61,7 @@ export default function GuidePage() {
                   </li>
                 </ul>
               </div>
-              <img src={gettingStarted} />
+              <img className="guideimage" src={gettingStarted} />
             </StepContent>
           </Step>
           <Step>
@@ -89,7 +89,7 @@ export default function GuidePage() {
                   </li>
                 </ul>
               </div>
-              <img src={dinoOutline} className="ml-auto " />
+              <img className="guideimage" src={dinoOutline} />
             </StepContent>
           </Step>
           <Step>
@@ -113,7 +113,7 @@ export default function GuidePage() {
                   <li>Message will confirm when the image has been imported</li>
                 </ul>
               </div>
-              <img src={importingTheImage} />
+              <img className="guideimage" src={importingTheImage} />
             </StepContent>
           </Step>
           <Step>
@@ -140,7 +140,7 @@ export default function GuidePage() {
                   <li>Press "Insert image"</li>
                 </ul>
               </div>
-              <img src={insertingTheImage} />
+              <img className="guideimage" src={insertingTheImage} />
             </StepContent>
           </Step>
           <Step>
@@ -154,7 +154,7 @@ export default function GuidePage() {
                   <li className="underline">DO NOT CONFIRM YOUR SKETCH YET</li>
                 </ul>
               </div>
-              <img src={insertingTheImage2} />
+              <img className="guideimage" src={insertingTheImage2} />
             </StepContent>
           </Step>
           <Step>
@@ -177,7 +177,7 @@ export default function GuidePage() {
                   </ul>
                 </li>
               </ul>
-              <img src={dimension} />
+              <img className="guideimage" src={dimension} />
             </StepContent>
           </Step>
           <Step>
@@ -207,7 +207,7 @@ export default function GuidePage() {
                   clicking on the green checkmark
                 </li>
               </ul>
-              <img src={tracing} />
+              <img className="guideimage" src={tracing} />
             </StepContent>
           </Step>
           <Step>
@@ -220,7 +220,7 @@ export default function GuidePage() {
                 </li>
                 <li>Then, select the outline of your sketch</li>
               </ul>
-              <img src={threeDTime} />
+              <img className="guideimage" src={threeDTime} />
             </StepContent>
           </Step>
           <Step>
@@ -241,7 +241,7 @@ export default function GuidePage() {
                 </li>
                 <li>Confirm the extrude</li>
               </ul>
-              <img src={threeDTime} />
+              <img className="guideimage" src={threeDTime} />
             </StepContent>
           </Step>
           <Step>
@@ -261,7 +261,7 @@ export default function GuidePage() {
                   </ul>
                 </li>
               </ul>
-              <img src={prettylittleborder} />
+              <img className="guideimage" src={prettylittleborder} />
             </StepContent>
           </Step>
           <Step>
@@ -272,7 +272,7 @@ export default function GuidePage() {
                 <li>Isn't it pretty?</li>
                 <li>Feel happy and proud!!</li>
               </ul>
-              <img src={admire} />
+              <img className="guideimage" src={admire} />
             </StepContent>
           </Step>
           <Step>
@@ -287,7 +287,7 @@ export default function GuidePage() {
                   You will need this for submission!!
                 </li>
               </ul>
-              <img src={screenshot} />
+              <img className="guideimage" src={screenshot} />
             </StepContent>
           </Step>
           <Step>
@@ -298,7 +298,7 @@ export default function GuidePage() {
                 <li>Right click the "Part Studio" tab in the bottom left</li>
                 <li>Select "Export"</li>
               </ul>
-              <img src={exportImage} />
+              <img className="guideimage" src={exportImage} />
             </StepContent>
           </Step>
           <Step>
@@ -317,7 +317,7 @@ export default function GuidePage() {
                   your computer
                 </li>
               </ul>
-              <img src={exportImage2} />
+              <img className="guideimage" src={exportImage2} />
             </StepContent>
           </Step>
           <Step>
@@ -342,19 +342,18 @@ export default function GuidePage() {
                 <li>
                   <span>
                     If it exceeds 100mm you can reshape the file with the help
-                    from the video below:
+                    from{" "}
+                    <a
+                      href="https://www.youtube.com/watch?v=_cFTrdposH0"
+                      className="underline"
+                    >
+                      this video
+                    </a>
                   </span>
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube-nocookie.com/embed/_cFTrdposH0?si=HZrytjEk8jBtYGcG"
-                    title="YouTube video player"
-                    className="mt-5"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  ></iframe>
                 </li>
               </ul>
-              <img src={doubleCheck} />
+
+              <img className="guideimage" src={doubleCheck} />
             </StepContent>
           </Step>
           <Step>
@@ -372,6 +371,14 @@ export default function GuidePage() {
                   <li>Click the "Bake It!" button</li>
                   <li>Fill out the form</li>
                   <li>That's all!</li>
+                  <li>
+                    <a
+                      className="underline"
+                      href="http://hack.club/submit-bakebuild"
+                    >
+                      Or alternatively click me
+                    </a>
+                  </li>
                 </ul>
               </div>
             </StepContent>
@@ -379,7 +386,10 @@ export default function GuidePage() {
           <div className="p-5 border-4 flex flex-col">
             <span className="text-4xl font-jaro flex gap-2 align-center items-center">
               BYE!{" "}
-              <img src="https://emoji.slack-edge.com/T09V59WQY1E/wavey/5bd2842c38fedd5c.gif" />
+              <img
+                className="guideimage"
+                src="https://emoji.slack-edge.com/T09V59WQY1E/wavey/5bd2842c38fedd5c.gif"
+              />
             </span>
             <span>Thanks for following the guide we hope you liked it!</span>
           </div>
