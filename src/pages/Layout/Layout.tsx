@@ -35,7 +35,8 @@ export default function Layout() {
       <main className="flex flex-1 flex-col">
         <Outlet />
       </main>
-      <footer className="bg-black text-white font-jaro text-md p-4 flex">
+      {/*TODO: */}
+      <footer className="bg-black text-center justify-center text-white font-jaro text-md p-4 flex">
         <span>
           Made by teens, for teens at{" "}
           <a className="underline text-sky-400" href="https://hackclub.com">
