@@ -230,8 +230,14 @@ export default function Home() {
             <p className="text-lg ">
               Have you ever wanted to run a BakeBuild workshop in your club?
               Yes? Everyone wants that. It's actually pretty easy! To run a
-              workshop you <b>must</b> have first completed BakeBuild. Do you
-              want to learn more? <a className="underline">click here</a>
+              workshop you <b>must</b> have first completed BakeBuild.{" "}
+              <a
+                className="underline"
+                href="http://hack.club/bakebuild-workshop"
+              >
+                Click here
+              </a>{" "}
+              to open the tutorial & submission form.
             </p>
           </div>
         </div>
