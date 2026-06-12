@@ -1,4 +1,4 @@
-import "./home.scss";
+import "./home.css";
 import cookie1 from "@/assets/cookie1.webp";
 import cookie2 from "@/assets/cookie2.webp";
 import stars from "@/assets/stars.webp";

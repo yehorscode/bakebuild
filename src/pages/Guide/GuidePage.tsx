@@ -14,7 +14,7 @@ import screenshot from "@/assets/guide/screenshot.webp";
 import exportImage from "@/assets/guide/export.webp";
 import exportImage2 from "@/assets/guide/export2.webp";
 import doubleCheck from "@/assets/guide/doublecheck.webp";
-import "./guidepage.scss";
+import "./guidepage.css";
 export default function GuidePage() {
   return (
     <div className="justify-center flex text-white align-center">
