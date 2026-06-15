@@ -204,14 +204,15 @@ export default function Home() {
             </h1>
             <div className="mt-5 text-xl text-center flex flex-col  font-jaro">
               <HomeGallery />
-              <div className="flex flex-col mt-3">
-                <span>Looks cool doesn't it?</span>
+
+              <div className="flex flex-col mt-5">
                 <a
                   className="text-xl text-center font-slackey underline"
                   href="/gallery"
                 >
                   View more images in our gallery
                 </a>
+                <span className="text-xs">Credits on /gallery page</span>
               </div>
             </div>
           </div>
