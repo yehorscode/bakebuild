@@ -1,16 +1,15 @@
 import { useState } from "react";
-
+import gallerySource from "@/assets/gallery/gallery.json";
+interface image {
+  url: string;
+  credits: string;
+  filename: string;
+}
 export default function GalleryPage() {
-  const imageModules = import.meta.glob<{ default: string }>(
-    "/public/gallery/*.{jpg,jpeg,png,gif,webp}",
-    { eager: true },
-  );
   const [showModal, setShowModal] = useState(false);
   const [modalImage, setModalImage] = useState(0);
 
-  const images = Object.values(imageModules)
-    .map((module) => module.default)
-    .sort();
+  const images = gallerySource as image[];
 
   function showImage(num: number) {
     setShowModal(true);
@@ -23,8 +22,8 @@ export default function GalleryPage() {
 
   return (
     <div className="justify-center flex text-white align-center">
-      <div className="mt-10 xl:w-2/3">
-        <div className="justify-center flex flex-col p-10">
+      <div className="mt-20 xl:w-2/3">
+        <div className="justify-center flex flex-col px-3 pb-10">
           <div className="flex flex-col justify-center items-center">
             <h1 className="smtxt text-8xl font-jaro">Gallery</h1>
             <div className="text-xl text-center font-slackey mt-3">
@@ -35,17 +34,17 @@ export default function GalleryPage() {
             {images.map((src, i) => (
               <img
                 key={i}
-                src={src}
+                src={src.url}
                 onClick={() => showImage(i)}
-                alt={`Gallery Image ${i + 1}`}
+                alt={`Credit: ${src.credits}, ${src.filename}`}
                 className="w-full h-auto rounded-lg shadow-md hover:cursor-pointer hover:scale-102 transition-all"
               />
             ))}
             {images.length == 0 && (
               <div className="bg-red-600 p-10">
-                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
-                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
-                <span>NO GALLERY IMAGES FOUND SOUND AN ALARM ON SLACK</span>
+                <span>
+                  NO GALLERY IMAGES FOUND AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                </span>
               </div>
             )}
           </div>
@@ -55,13 +54,13 @@ export default function GalleryPage() {
               onClick={closeModal}
             >
               <div
-                className="relative max-h-[90vh] max-w-[90vw] rounded-lg overflow-hidden"
+                className="relative max-h-[80vh] max-w-[90vw] rounded-lg overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
               >
                 <img
-                  src={images[modalImage]}
-                  alt={`Gallery Image ${modalImage + 1}`}
-                  className="w-full h-full object-contain"
+                  src={images[modalImage].url}
+                  alt={`Credit: ${images[modalImage].credits}, ${images[modalImage].filename}`}
+                  className="max-w-[90vw] max-h-[75vh] object-contain"
                 />
                 <button
                   onClick={closeModal}
@@ -70,6 +69,7 @@ export default function GalleryPage() {
                 >
                   ✕
                 </button>
+                <span>Credits: {images[modalImage].credits}</span>
                 {modalImage > 0 && (
                   <button
                     onClick={() => setModalImage(modalImage - 1)}

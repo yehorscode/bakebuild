@@ -8,12 +8,11 @@ import {
 
 export default function HomeGallery() {
   const images = [
-    "https://placehold.co/1920x1080",
-    "https://placehold.co/1920x1080",
-    "https://placehold.co/1920x1080",
-    "https://placehold.co/1920x1080",
-    "https://placehold.co/1920x1080",
-    "https://placehold.co/1920x1080",
+    "https://cdn.hackclub.com/019ecc7c-d7dd-75a7-8add-7d85c6d50e23/1000088286.webp",
+    "https://cdn.hackclub.com/019ecc7c-d9c9-7011-856f-544ae9fdd4f3/1000088291.webp",
+    "https://cdn.hackclub.com/019ecc7d-58fa-7a1b-8ea1-ff66d13695c5/1000019066.webp",
+    "https://cdn.hackclub.com/019ecc7b-65bd-7f07-918a-9f35488bd72f/IMG_9047.webp",
+    "https://cdn.hackclub.com/019ecc77-a821-7ffc-b0a7-60777617cc58/DSCF5723.webp",
   ];
   return (
     <Carousel

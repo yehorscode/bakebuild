@@ -1,17 +1,17 @@
 import "./home.css";
-import cookie1 from "@/assets/cookie1.webp";
-import cookie2 from "@/assets/cookie2.webp";
-import stars from "@/assets/stars.webp";
-import belt from "@/assets/belt.svg";
-import sticker from "@/assets/sticker.webp";
-import dimensions from "@/assets/dimensions.webp";
-import prefed from "@/assets/prefed.webp";
-import clubCutters from "@/assets/clubcutters.webp";
-import threeCutters from "@/assets/3cutters.webp";
-import noHackatime from "@/assets/nohackatime.webp";
-import guideHere from "@/assets/guidehere.webp";
-import teachingDino from "@/assets/teachingdino.webp";
-import bakeit from "@/assets/bakeit.webp";
+import cookie1 from "@/assets/home/cookie1.webp";
+import cookie2 from "@/assets/home/cookie2.webp";
+import stars from "@/assets/home/stars.webp";
+import belt from "@/assets/home/belt.svg";
+import sticker from "@/assets/home/sticker.webp";
+import dimensions from "@/assets/home/dimensions.webp";
+import prefed from "@/assets/home/prefed.webp";
+import clubCutters from "@/assets/home/clubcutters.webp";
+import threeCutters from "@/assets/home/3cutters.webp";
+import noHackatime from "@/assets/home/nohackatime.webp";
+import guideHere from "@/assets/home/guidehere.webp";
+import teachingDino from "@/assets/home/teachingdino.webp";
+import bakeit from "@/assets/home/bakeit.webp";
 import {
   Tooltip,
   TooltipContent,
