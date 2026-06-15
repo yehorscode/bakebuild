@@ -8,6 +8,7 @@ export default function Layout() {
           fetchPriority="low"
           src="https://assets.hackclub.com/flag-orpheus-top.svg"
           className="w-[25vw] sm:w-[30vw] md:w-50"
+          alt="Hack Club mascot orpheus holding a red flag saying 'Hack Club' with white text"
         />
       </div>
       <nav className="absolute right-2 z-100 p-3 text-white ">

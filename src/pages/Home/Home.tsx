@@ -32,18 +32,22 @@ export default function Home() {
           <img
             src={cookie1}
             className="absolute w-40 top-10 -right-10 cookie"
+            alt="Image of a chocolate chip cookie"
           />
           <img
             src={cookie1}
             className="absolute w-60 bottom-10 -left-20 cookie2"
+            alt="Image of a chocolate chip cookie"
           />
           <img
             src={cookie2}
             className="absolute w-50 top-20 -left-20 cookie2"
+            alt="Image of a chocolate chip cookie"
           />
           <img
             src={cookie2}
             className="absolute w-50 bottom-19 -right-20 cookie"
+            alt="Image of a chocolate chip cookie"
           />
           {/*<img src="src/assets/cut.webp" className="w-250" />*/}
           <h1 className="relative z-5 text-[30vw] lg:text-[280px] xl:text-[30vh] -mt-10 font-jaro uppercase inline-flex flex-col w-fit leading-none">
@@ -51,11 +55,13 @@ export default function Home() {
               fetchPriority="low"
               src={stars}
               className="absolute invisible sm:visible -top-12 -left-10 -translate-x-1/2 w-100 pointer-events-none"
+              alt="Stars"
             />
             <img
               fetchPriority="low"
               src={stars}
               className="absolute invisible sm:visible -bottom-12 -right-10 translate-x-1/2 rotate-180 w-100 pointer-events-none"
+              alt="Stars"
             />
             <div className="flex flex-col gap-30">
               <span className="txtshdw z-50 flex w-full text-shadow-accent justify-between">
@@ -70,6 +76,7 @@ export default function Home() {
             <img
               src={sticker}
               className="absolute w-75 sm:w-[55vw] lg:w-125 xl:w-[50vh]  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+              alt="Image of a chocolate chip cookie"
             />
           </h1>
 
@@ -106,11 +113,23 @@ export default function Home() {
         <div className="belt-container absolute bottom-0">
           <div className="belt-track">
             <div className="belt-group">
-              <img className="belt-image h-[10vh]" src={belt} />
-              <img className="belt-image h-[10vh]" src={belt} />
+              <img
+                className="belt-image h-[10vh]"
+                src={belt}
+                alt="moving belt"
+              />
+              <img
+                className="belt-image h-[10vh]"
+                src={belt}
+                alt="moving belt"
+              />
             </div>
             <div className="belt-group" aria-hidden="true">
-              <img className="belt-image h-[10vh]" src={belt} />
+              <img
+                className="belt-image h-[10vh]"
+                src={belt}
+                alt="moving belt"
+              />
             </div>
           </div>
         </div>
@@ -125,11 +144,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 font-jaro text-2xl mt-5 items-start w-fit mx-auto">
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src={dimensions} className="w-full max-w-50" />
+              <img
+                src={dimensions}
+                className="w-full max-w-50"
+                alt="Image representing Maximum 100x100x100mm on each cutter"
+              />
               <span>Maximum 100x100x100mm on each cutter</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
-              <img src={prefed} className="w-full max-w-50" />
+              <img
+                src={prefed}
+                className="w-full max-w-50"
+                alt="Image representing Any CAD software accepted, but Onshape preferred!"
+              />
               <span>Any CAD software accepted, but Onshape preferred!</span>
             </span>
             <span className="flex border p-2 rounded-sm flex-col items-center text-center gap-3 max-w-[290px] mx-auto sm:col-span-2 lg:col-span-1">
@@ -137,6 +164,7 @@ export default function Home() {
                 src={clubCutters}
                 className="w-full max-w-50"
                 fetchPriority="low"
+                alt="Image representing Up to 3 cutters per person for clubs!"
               />
               <span>Up to 3 cutters per person for clubs!</span>
             </span>
@@ -145,6 +173,7 @@ export default function Home() {
                 src={threeCutters}
                 className="w-full max-w-50"
                 fetchPriority="low"
+                alt="Image representing 3 cutters REQUIRED for individuals"
               />
               <span>3 cutters REQUIRED for individuals</span>
             </span>
@@ -153,6 +182,7 @@ export default function Home() {
                 src={noHackatime}
                 className="w-full max-w-30"
                 fetchPriority="low"
+                alt="Image representing Time tracking not required!"
               />
               <span>Time tracking not required!</span>
             </span>
@@ -160,7 +190,11 @@ export default function Home() {
               href="/guide"
               className="underline border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto"
             >
-              <img src={guideHere} className="w-full max-w-50" />
+              <img
+                src={guideHere}
+                className="w-full max-w-50"
+                alt="Image representing Guide Available!"
+              />
               <span>Guide Available!</span>
             </a>
           </div>
@@ -225,7 +259,11 @@ export default function Home() {
               Run a workshop!
             </h1>
           </div>
-          <img src={teachingDino} fetchPriority="low" />
+          <img
+            src={teachingDino}
+            fetchPriority="low"
+            alt="Orpheus dino in a classroom saying BakeBuild"
+          />
           <div className="max-w-3xl">
             <span className="text-3xl font-jaro">Hey club leader!</span>
             <p className="text-lg ">
@@ -236,9 +274,8 @@ export default function Home() {
                 className="underline"
                 href="http://hack.club/bakebuild-workshop"
               >
-                Click here
+                Open the tutorial & submission form &#40;click&#41;.
               </a>{" "}
-              to open the tutorial & submission form.
             </p>
           </div>
         </div>
