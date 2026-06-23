@@ -62,9 +62,17 @@ export default function Layout() {
             className="underline text-sky-400"
             href="https://hackclub.com/slack/"
           >
-            Slack
+            Slack.
           </a>
         </span>
+        <div className="border mx-1 border-white"></div>
+        <a
+          href="https://jams.hackclub.com/jam/bakebuild"
+          className="underline text-sky-400"
+        >
+          {" "}
+          Open Jam
+        </a>
       </footer>
     </div>
   );

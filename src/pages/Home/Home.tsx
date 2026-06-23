@@ -18,8 +18,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import HomeGallery from "./components/gallery";
+import { useState } from "react";
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="flex-1">
       <section
@@ -186,21 +188,26 @@ export default function Home() {
               />
               <span>Time tracking not required!</span>
             </span>
-            <a
-              href="/guide"
-              className="underline border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto"
-            >
+            <span className=" border p-2 rounded-sm flex flex-col items-center text-center gap-3 max-w-[290px] mx-auto">
               <img
                 src={guideHere}
                 className="w-full max-w-50"
                 alt="Image representing Guide Available!"
               />
-              <span>Guide Available!</span>
-            </a>
+              <span>Open guide with buttons below</span>
+            </span>
           </div>
-          <div className="text-xl mt-5 text-center font-slackey underline">
-            <a href="/guide">Don't know how? Click here for a tutorial</a>
+          <div className="w-full items-center justify-center gap-3 mt-10 flex not-sm:flex-col">
+            <div className="text-xl border-4 p-2 w-fit font-slackey underline">
+              <a href="/guide">Open tutorial (on site)</a>
+            </div>
+            <div className="text-xl border-4 p-2 w-fit font-slackey underline">
+              <a href="https://cdn.hackclub.com/019ee9f0-4584-7836-a0b9-316d40a5b0da/bakebuildguidev4.pdf">
+                Open presentation file
+              </a>
+            </div>
           </div>
+
           {/*<div className="flex flex-col justify-center items-center">
             <span className="text-xl font-jaro mt-5">
               You can print cookie cutters on your own printer too! (no filament
@@ -230,28 +237,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
-        <div className="justify-center flex flex-col p-10">
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="smtxt text-6xl sm:text-8xl font-jaro">
-              Past workshops
-            </h1>
-            <div className="mt-5 text-xl text-center flex flex-col  font-jaro">
-              <HomeGallery />
 
-              <div className="flex flex-col mt-5">
-                <a
-                  className="text-xl text-center font-slackey underline"
-                  href="/gallery"
-                >
-                  View more images in our gallery
-                </a>
-                <span className="text-xs">Credits on /gallery page</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col bg-red-400  w-full overflow-hidden">
         <div className="justify-center items-center flex flex-col p-10">
           <div className="flex flex-col justify-center items-center">
@@ -264,19 +250,107 @@ export default function Home() {
             fetchPriority="low"
             alt="Orpheus dino in a classroom saying BakeBuild"
           />
-          <div className="max-w-3xl">
+          <div className="max-w-3xl flex-col flex items-start text-left">
             <span className="text-3xl font-jaro">Hey club leader!</span>
-            <p className="text-lg ">
-              Have you ever wanted to run a BakeBuild workshop in your club?
-              Yes? Everyone wants that. It's actually pretty easy! To run a
-              workshop you <b>must</b> have first completed BakeBuild.{" "}
-              <a
+            <p className="text-lg text-left justify-left items-left flex flex-col">
+              <button
+                onClick={() => setOpen(!open)}
+                className="text-left w-full hover:underline hover:cursor-pointer"
+              >
+                Have you ever wanted to run a BakeBuild workshop in your club?
+                Yes? Everyone wants that. It's actually pretty easy! To run a
+                workshop you <b>must</b> have first completed BakeBuild. There
+                are a couple steps to organising one: (click text to expand
+                tutorial {open ? ", ▲" : ", ▼"})
+              </button>
+              {open && (
+                <ul>
+                  <li>
+                    1. Fill out the form to register your workshop (click button
+                    below)
+                  </li>
+                  <li>
+                    2. Patiently want for a follow-up email saying that your
+                    workshop has been approved.{" "}
+                    <span>
+                      do <u>not</u> start your workshop until you have confirmed
+                      that you have been approved!!
+                    </span>{" "}
+                    Please reach out to{" "}
+                    <a
+                      href="https://hackclub.enterprise.slack.com/team/U085US8GYG6"
+                      className="underline hover:cursor-pointer text-cyan-200"
+                    >
+                      @Shaan
+                    </a>{" "}
+                    if you have anything time-sensitive, special requests, or
+                    any other issues.
+                  </li>
+                  <li>
+                    3. Host your workshop! You can find a guide{" "}
+                    <a className="underline hover:cursor-pointer text-cyan-200">
+                      here
+                    </a>
+                    . Have your participants each fill out the submission form.{" "}
+                    <b>
+                      Please have them select that they are participating in a
+                      workshop and have them select your workshop code in the
+                      subsequent question
+                    </b>
+                  </li>
+                  <li>
+                    4. Once ALL of your participants have submitted AND are
+                    approved, fill out the Workshop Complete form you'll receive
+                    in your email. You will need to track this YOURSELF. Any
+                    submissions from your workshop AFTER this form is completed
+                    will be rejected
+                  </li>
+                  <li>
+                    5. Wait for the cookie cutters in the mail and host a follow
+                    up meeting with your cookies! You will receive around $5 USD
+                    per approved submission from your club at the time. I highly
+                    reccomend baking your own cookies and using the cookie
+                    cutters!!
+                  </li>
+                </ul>
+              )}
+
+              {/*<a
                 className="underline"
                 href="http://hack.club/bakebuild-workshop"
               >
                 Open the tutorial & submission form &#40;click&#41;.
-              </a>{" "}
+              </a>{" "}*/}
+              <br />
             </p>
+            <a
+              href="http://hack.club/bakebuild-workshop"
+              className=" border-4 p-2 mt-3 w-fit font-slackey hover:cursor-pointer underline"
+            >
+              Open workshop form
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className="relative border-5 text-white xl:px-50 2xl:px-80 flex flex-col  w-full overflow-hidden">
+        <div className="justify-center flex flex-col p-10">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="smtxt text-6xl sm:text-8xl font-jaro">
+              Past workshops
+            </h1>
+            <div className="flex flex-col justify-center items-center text-center mt-5">
+              <HomeGallery />
+
+              <div className="flex flex-col justify-center align-center text-center mt-5">
+                <a
+                  className=" border-4 w-fit p-2 mt-3 font-slackey hover:cursor-pointer underline"
+                  href="/gallery"
+                >
+                  View more images in the gallery
+                </a>
+                <span className="text-xs mt-1">Credits on /gallery page</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
