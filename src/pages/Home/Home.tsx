@@ -2,7 +2,7 @@ import "./home.css";
 import cookie1 from "@/assets/home/cookie1.webp";
 import cookie2 from "@/assets/home/cookie2.webp";
 import stars from "@/assets/home/stars.webp";
-import belt from "@/assets/home/belt.svg";
+import belt from "@/assets/home/belt.webp";
 import sticker from "@/assets/home/sticker.webp";
 import dimensions from "@/assets/home/dimensions.webp";
 import prefed from "@/assets/home/prefed.webp";

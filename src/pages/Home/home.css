@@ -6,7 +6,7 @@
 .belt-track {
   display: flex;
   width: max-content;
-  animation: belt-scroll 25s linear infinite;
+  animation: belt-scroll 50s linear infinite;
 }
 
 .belt-group {
