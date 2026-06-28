@@ -22,6 +22,50 @@ import { useState } from "react";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
+  const [step, setStep] = useState<number>(0);
+  const steps = [
+    <span>
+      1. Fill out the form to register your workshop (click button below)
+    </span>,
+    <span>
+      2. Patiently want for a follow-up email saying that your workshop has been
+      approved.{" "}
+      <span>
+        do <u>not</u> start your workshop until you have confirmed that you have
+        been approved!!
+      </span>{" "}
+      Please reach out to{" "}
+      <a
+        href="https://hackclub.enterprise.slack.com/team/U085US8GYG6"
+        className="underline hover:cursor-pointer text-cyan-200"
+      >
+        @Shaan
+      </a>{" "}
+      if you have anything time-sensitive, special requests, or any other
+      issues.
+    </span>,
+    <span>
+      3. Host your workshop! You can find a guide{" "}
+      <a className="underline hover:cursor-pointer text-cyan-200">here</a>. Have
+      your participants each fill out the submission form.{" "}
+      <b>
+        Please have them select that they are participating in a workshop and
+        have them select your workshop code in the subsequent question
+      </b>
+    </span>,
+    <span>
+      4. Once ALL of your participants have submitted AND are approved, fill out
+      the Workshop Complete form you'll receive in your email. You will need to
+      track this YOURSELF. Any submissions from your workshop AFTER this form is
+      completed will be rejected
+    </span>,
+    <span>
+      5. Wait for the cookie cutters in the mail and host a follow up meeting
+      with your cookies! You will receive around $5 USD per approved submission
+      from your club at the time. I highly reccomend baking your own cookies and
+      using the cookie cutters!!
+    </span>,
+  ];
   return (
     <div className="flex-1">
       <section
@@ -253,68 +297,35 @@ export default function Home() {
           <div className="max-w-3xl flex-col flex items-start text-left">
             <span className="text-3xl font-jaro">Hey club leader!</span>
             <p className="text-lg text-left justify-left items-left flex flex-col">
-              <button
-                onClick={() => setOpen(!open)}
-                className="text-left w-full hover:underline hover:cursor-pointer"
-              >
+              <span className="text-left w-full">
                 Have you ever wanted to run a BakeBuild workshop in your club?
                 Yes? Everyone wants that. It's actually pretty easy! To run a
                 workshop you <b>must</b> have first completed BakeBuild. There
-                are a couple steps to organising one: (click text to expand
-                tutorial {open ? ", ▲" : ", ▼"})
-              </button>
-              {open && (
-                <ul>
-                  <li>
-                    1. Fill out the form to register your workshop (click button
-                    below)
-                  </li>
-                  <li>
-                    2. Patiently want for a follow-up email saying that your
-                    workshop has been approved.{" "}
-                    <span>
-                      do <u>not</u> start your workshop until you have confirmed
-                      that you have been approved!!
-                    </span>{" "}
-                    Please reach out to{" "}
-                    <a
-                      href="https://hackclub.enterprise.slack.com/team/U085US8GYG6"
-                      className="underline hover:cursor-pointer text-cyan-200"
-                    >
-                      @Shaan
-                    </a>{" "}
-                    if you have anything time-sensitive, special requests, or
-                    any other issues.
-                  </li>
-                  <li>
-                    3. Host your workshop! You can find a guide{" "}
-                    <a className="underline hover:cursor-pointer text-cyan-200">
-                      here
-                    </a>
-                    . Have your participants each fill out the submission form.{" "}
-                    <b>
-                      Please have them select that they are participating in a
-                      workshop and have them select your workshop code in the
-                      subsequent question
-                    </b>
-                  </li>
-                  <li>
-                    4. Once ALL of your participants have submitted AND are
-                    approved, fill out the Workshop Complete form you'll receive
-                    in your email. You will need to track this YOURSELF. Any
-                    submissions from your workshop AFTER this form is completed
-                    will be rejected
-                  </li>
-                  <li>
-                    5. Wait for the cookie cutters in the mail and host a follow
-                    up meeting with your cookies! You will receive around $5 USD
-                    per approved submission from your club at the time. I highly
-                    reccomend baking your own cookies and using the cookie
-                    cutters!!
-                  </li>
-                </ul>
-              )}
-
+                are a couple steps to organising one:
+              </span>
+              <div className="p-2 border-2 mt-3 flex">
+                <span className="mr-2">{steps.at(step)} </span>
+                <button
+                  className="ml-auto text-sm font-slackey border-l-2 pl-2 underline"
+                  onClick={() =>
+                    setStep(step !== steps.length - 1 ? step + 1 : 0)
+                  }
+                >
+                  Next step
+                </button>
+              </div>
+              <div className="flex gap-2 mt-2">
+                {steps.map((s, index) => (
+                  <div
+                    className="rounded-full w-3 h-3"
+                    style={
+                      step === index
+                        ? { backgroundColor: "white" }
+                        : { backgroundColor: "#D8D8D8" }
+                    }
+                  ></div>
+                ))}
+              </div>
               {/*<a
                 className="underline"
                 href="http://hack.club/bakebuild-workshop"
@@ -325,7 +336,7 @@ export default function Home() {
             </p>
             <a
               href="http://hack.club/bakebuild-workshop"
-              className=" border-4 p-2 mt-3 w-fit font-slackey hover:cursor-pointer underline"
+              className=" border-4 p-2 w-fit font-slackey hover:cursor-pointer underline"
             >
               Open workshop form
             </a>
