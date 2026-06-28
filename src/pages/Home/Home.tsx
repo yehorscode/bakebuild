@@ -21,7 +21,6 @@ import HomeGallery from "./components/gallery";
 import { useState } from "react";
 
 export default function Home() {
-  const [open, setOpen] = useState(false);
   const [step, setStep] = useState<number>(0);
   const steps = [
     <span>
@@ -315,7 +314,7 @@ export default function Home() {
                 </button>
               </div>
               <div className="flex gap-2 mt-2">
-                {steps.map((s, index) => (
+                {steps.map((_, index) => (
                   <div
                     className="rounded-full w-3 h-3"
                     style={
